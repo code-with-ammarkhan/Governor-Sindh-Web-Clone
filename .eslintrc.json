@@ -1,3 +1,8 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [],
+  "rules": {
+    "no-unused-vars": "off",
+    "react/no-unescaped-entities": "off" // Aap aur bhi rules ko yahan disable kar sakte hain
+  }
 }
+

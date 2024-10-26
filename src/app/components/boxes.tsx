@@ -3,8 +3,7 @@ import Image from "next/image";
 import Box1 from "../images/box1.jpg";
 import Box2 from "../images/box2.jpg";
 import Box3 from "../images/box3.jpg";
-import Carousel from "./carousel";
-import SlickSlider from "./carouselx/Slickslider";
+// Removed unused imports
 import ImageSlider from "./ImageSlider";
 
 function Box() {
@@ -15,7 +14,7 @@ function Box() {
     "https://i.ibb.co/zmDj3JW/5.png",
     "https://i.ibb.co/kqGWgPC/6.png",
     "https://i.ibb.co/09CBpSn/Capture.png",
-    "../images/box3.jpg",
+    // "../images/box3.jpg", // Ye local image link ko yahan include nahi kar rahe
   ];
 
   return (
@@ -27,6 +26,9 @@ function Box() {
             src={Box1}
             alt="Box1"
             className="rounded-lg object-cover w-full h-full shadow-2xl shadow-black"
+            layout="responsive" // Maintain aspect ratio
+            width={300} // Set appropriate width
+            height={200} // Set appropriate height
           />
         </div>
 
@@ -36,6 +38,9 @@ function Box() {
             src={Box2}
             alt="Box2"
             className="rounded-lg object-cover w-[96%] h-full shadow-2xl shadow-black"
+            layout="responsive" // Maintain aspect ratio
+            width={300} // Set appropriate width
+            height={200} // Set appropriate height
           />
         </div>
 
@@ -45,12 +50,15 @@ function Box() {
             src={Box3}
             alt="Box3"
             className="rounded-lg object-cover w-full h-full shadow-2xl shadow-black"
+            layout="responsive" // Maintain aspect ratio
+            width={300} // Set appropriate width
+            height={200} // Set appropriate height
           />
         </div>
 
         {/* Carousel Box */}
         <div className="w-[100%] sm:w-[70%] md:w-[30%] lg:w-[25%] xl:w-[25%] h-auto cursor-pointer transition duration-500 ease-out hover:scale-105 hover:ease-in rounded-lg p-4">
-          <h3 className="text-lg font-bold mb-2"></h3>
+          <h3 className="text-lg font-bold mb-2">Image Slider</h3> {/* Add title here */}
           <ImageSlider />
         </div>
       </div>
