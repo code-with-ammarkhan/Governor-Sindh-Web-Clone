@@ -1,0 +1,9 @@
+.mySwiper {
+  width: 200%;
+  height: 200px;
+  width: 600px; /* Adjust as needed */
+}
+
+.swiper-slide img {
+  object-fit: cover;
+}
